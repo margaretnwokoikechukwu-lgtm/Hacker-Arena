@@ -1,1 +1,70 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code War - Hacker Arena</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/game.css">
+
+</head>
+<body>
+
+<div class="game-wrapper">
+
+    <div class="game-header">
+        <h1>CODE WAR</h1>
+        <div class="game-status" id="gameStatus">
+            Status: Waiting to Start
+        </div>
+    </div>
+
+    <div class="game-board">
+
+        <!-- LEFT PANEL -->
+        <div class="left-panel">
+
+            <div class="input-section">
+                <label>Enter 4-digit Guess</label>
+                <input type="text" id="guessInput" maxlength="4" placeholder="1234">
+                <button id="submitGuess">Submit Guess</button>
+            </div>
+
+            <div class="control-section">
+                <button id="startGame">Start Game</button>
+                <button id="resetGame">Reset</button>
+                <button data-coming="true">Multiplayer (Coming Soon)</button>
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right-panel">
+
+            <h3>Guess History</h3>
+
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>Guess</th>
+                        <th>Dead</th>
+                        <th>Injured</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/core.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/codewar.js"></script>
+
+</body>
+</html>
