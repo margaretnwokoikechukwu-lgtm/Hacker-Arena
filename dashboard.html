@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hacker Arena - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global + Dashboard Style -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <header class="dashboard-header">
+            <h1>HACKER ARENA</h1>
+            <p>Control Panel</p>
+        </header>
+
+        <section class="stats-section">
+            <h2>Player Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="totalGames">0</h3>
+                    <p>Total Games</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="wins">0</h3>
+                    <p>Wins</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="losses">0</h3>
+                    <p>Losses</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="winRate">0%</h3>
+                    <p>Win Rate</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="games-section">
+            <h2>Games</h2>
+
+            <a href="codewar.html" class="game-button">
+                ▶ Play Code War
+            </a>
+
+            <a href="comingsoon.html" class="game-button disabled">
+                🌐 Multiplayer (WiFi) - Coming Soon
+            </a>
+
+            <a href="tutorial.html" class="game-button">
+                📘 View Tutorial
+            </a>
+        </section>
+
+        <section class="system-section">
+            <h2>System</h2>
+
+            <button class="system-button" id="resetStats">
+                Reset Stats
+            </button>
+
+            <a href="index.html" class="system-button back-button">
+                ← Back to Home
+            </a>
+        </section>
+
+    </div>
+
+</body>
+</html>
