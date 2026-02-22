@@ -20,11 +20,10 @@ let GameController = {
     /* =============================
        START GAME
     ============================= */
-
     startGame() {
 
-        const secretInput = document.getElementById("playerSecret").value;
-        const difficultySelect = document.getElementById("difficulty").value;
+        const secretInput = document.getElementById("secretInput").value;
+        const difficultySelect = document.getElementById("difficultySelect").value;
 
         if (!Engine.validateSecret(secretInput)) {
             alert("Secret must be 4 UNIQUE digits.");
@@ -45,29 +44,29 @@ let GameController = {
 
         UI.showGamePanel();
         UI.updateDashboard(this.state);
+        UI.setTurn("YOU");
 
         UI.log("Battle Started");
         UI.log("Difficulty: " + difficultySelect.toUpperCase());
 
-        Sound.playClick();
+        if (window.Sound) Sound.playClick();
     },
 
     /* =============================
        PLAYER ATTACK
     ============================= */
-
     playerAttack() {
 
         if (!this.state.gameActive || !this.state.playerTurn) return;
 
-        const guess = document.getElementById("playerGuess").value;
+        const guess = document.getElementById("guessInput").value;
 
         if (!Engine.validateGuess(guess)) {
-            alert("Guess must be 4 digits.");
+            alert("Guess must be exactly 4 digits.");
             return;
         }
 
-        Sound.playClick();
+        if (window.Sound) Sound.playClick();
 
         const result = Engine.calculateResult(
             this.state.computerSecret,
@@ -91,36 +90,35 @@ let GameController = {
     /* =============================
        COMPUTER ATTACK
     ============================= */
-
     computerAttack() {
 
         if (!this.state.gameActive) return;
 
         if (this.state.difficulty === "easy") {
             this.state.computerGuess = Engine.generateSecret();
-        }
-        else {
+        } else {
             this.state.computerGuess = Engine.getSmartGuess();
         }
 
-        UI.displayComputerGuess(this.state.computerGuess);
+        UI.displayComputerGuess("Computer attacks: " + this.state.computerGuess);
     },
 
     /* =============================
        COMPUTER RESULT SUBMIT
     ============================= */
-
     submitComputerResult() {
+
+        if (!this.state.gameActive) return;
 
         const dead = parseInt(document.getElementById("deadInput").value);
         const injured = parseInt(document.getElementById("injuredInput").value);
 
-        if (isNaN(dead) || isNaN(injured) || dead + injured > 4) {
+        if (isNaN(dead) || isNaN(injured) || dead < 0 || injured < 0 || dead + injured > 4) {
             alert("Invalid numbers.");
             return;
         }
 
-        Sound.playClick();
+        if (window.Sound) Sound.playClick();
 
         UI.log("CPU → " + this.state.computerGuess + " | " + dead + "D " + injured + "I");
 
@@ -145,7 +143,6 @@ let GameController = {
     /* =============================
        END ROUND
     ============================= */
-
     endRound(message) {
 
         this.state.gameActive = false;
@@ -153,7 +150,7 @@ let GameController = {
         UI.updateDashboard(this.state);
         UI.showWinOverlay(message);
 
-        Sound.playWin();
+        if (window.Sound) Sound.playWin();
     }
 };
 
