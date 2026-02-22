@@ -1,1 +1,150 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hacker Arena - Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="tutorial-container">
+
+    <header class="tutorial-header">
+        <h1>HACKER ARENA</h1>
+        <p>Interactive Tutorial</p>
+    </header>
+
+    <div class="tutorial-section">
+        <button class="tutorial-toggle">1️⃣ What Is Code War?</button>
+        <div class="tutorial-content">
+            <p>
+                Code War is a strategic number battle game.
+                Each player chooses a 4-digit secret code.
+            </p>
+            <p>
+                The goal is to correctly guess the opponent’s code.
+            </p>
+        </div>
+    </div>
+
+    <div class="tutorial-section">
+        <button class="tutorial-toggle">2️⃣ Secret Rules</button>
+        <div class="tutorial-content">
+            <ul>
+                <li>Secret must contain 4 unique digits.</li>
+                <li>Guess CAN contain repeated digits.</li>
+                <li>Only numbers 0-9 allowed.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tutorial-section">
+        <button class="tutorial-toggle">3️⃣ What Is Dead & Injured?</button>
+        <div class="tutorial-content">
+            <p><strong>Dead</strong> = Correct number in correct position.</p>
+            <p><strong>Injured</strong> = Correct number but wrong position.</p>
+            <p>First to get 4 Dead wins the round.</p>
+        </div>
+    </div>
+
+    <div class="tutorial-section">
+        <button class="tutorial-toggle">4️⃣ Difficulty Modes</button>
+        <div class="tutorial-content">
+            <ul>
+                <li><strong>Easy</strong> — Random AI guesses</li>
+                <li><strong>Normal</strong> — Smarter filtered guesses</li>
+                <li><strong>Hard</strong> — Strategic AI algorithm</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tutorial-section">
+        <button class="tutorial-toggle">5️⃣ Multiplayer (Coming Soon)</button>
+        <div class="tutorial-content">
+            <p>
+                Local WiFi multiplayer will allow two devices
+                on the same network to connect.
+            </p>
+            <p>
+                This feature is currently under development.
+            </p>
+        </div>
+    </div>
+
+    <div class="tutorial-footer">
+        <a href="dashboard.html" class="back-button">← Back to Dashboard</a>
+    </div>
+
+</div>
+
+<script>
+    const toggles = document.querySelectorAll(".tutorial-toggle");
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener("click", () => {
+            const content = toggle.nextElementSibling;
+            content.classList.toggle("active");
+        });
+    });
+</script>
+
+<style>
+.tutorial-container{
+    max-width:900px;
+    margin:auto;
+    padding:30px;
+}
+
+.tutorial-header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.tutorial-section{
+    margin-bottom:15px;
+}
+
+.tutorial-toggle{
+    width:100%;
+    padding:15px;
+    font-size:16px;
+    background:#001d3d;
+    color:#00f5d4;
+    border:1px solid #00f5d4;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.tutorial-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    background:#000814;
+    padding:0 15px;
+    border-left:2px solid #00f5d4;
+}
+
+.tutorial-content.active{
+    max-height:500px;
+    padding:15px;
+}
+
+.tutorial-footer{
+    margin-top:30px;
+    text-align:center;
+}
+
+.back-button{
+    padding:10px 20px;
+    background:#00f5d4;
+    color:#000;
+    border-radius:6px;
+    text-decoration:none;
+}
+</style>
+
+</body>
+</html>
