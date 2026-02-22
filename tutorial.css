@@ -1,1 +1,115 @@
-.
+/* ======================================================
+   HACKER ARENA - TUTORIAL STYLE
+====================================================== */
+
+body{
+    margin:0;
+    font-family:'Courier New', monospace;
+    background:linear-gradient(135deg,#000814,#001d3d);
+    color:#00f5d4;
+}
+
+/* ===== Layout ===== */
+
+.tutorial-container{
+    width:90%;
+    max-width:800px;
+    margin:60px auto;
+    background:#001d3d;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #00f5d4;
+    box-shadow:0 0 20px #00f5d4;
+    animation:fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== Title ===== */
+
+#slideTitle{
+    font-size:22px;
+    margin-bottom:15px;
+    text-align:center;
+    text-shadow:0 0 10px #00f5d4;
+}
+
+/* ===== Content ===== */
+
+#slideContent{
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+/* ===== Buttons ===== */
+
+.nav-buttons{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+button{
+    flex:1;
+    padding:10px;
+    background:#00f5d4;
+    color:#000;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    background:#00c2a8;
+}
+
+/* ===== Quiz Buttons ===== */
+
+.optionBtn{
+    display:block;
+    width:100%;
+    margin-top:10px;
+    background:#000814;
+    color:#00f5d4;
+    border:1px solid #00f5d4;
+}
+
+.optionBtn:hover{
+    background:#001d3d;
+}
+
+/* ===== Progress Bar ===== */
+
+.progress-container{
+    width:100%;
+    height:8px;
+    background:#000814;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+#progressBar{
+    height:100%;
+    width:0%;
+    background:#00f5d4;
+    border-radius:8px;
+    transition:width 0.4s ease;
+}
+
+/* ===== Exit Button ===== */
+
+.exit-btn{
+    margin-top:20px;
+    background:#ff0054;
+    color:#fff;
+}
+
+.exit-btn:hover{
+    background:#c4003d;
+}
