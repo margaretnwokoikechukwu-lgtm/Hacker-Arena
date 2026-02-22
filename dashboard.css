@@ -1,1 +1,123 @@
-.
+/* ===== DASHBOARD CONTAINER ===== */
+.dashboard-container {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    font-size: 36px;
+    color: #00ffcc;
+    letter-spacing: 2px;
+}
+
+.dashboard-header p {
+    color: #aaaaaa;
+    margin-top: 8px;
+}
+
+/* ===== SECTION TITLES ===== */
+section h2 {
+    margin-bottom: 20px;
+    color: #00ffcc;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 5px;
+}
+
+/* ===== STATS SECTION ===== */
+.stats-section {
+    margin-bottom: 50px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    border: 1px solid #00ffcc;
+    box-shadow: 0 0 10px #00ffcc33;
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    color: #00ffcc;
+}
+
+.stat-card p {
+    font-size: 14px;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+/* ===== GAMES SECTION ===== */
+.games-section {
+    margin-bottom: 50px;
+}
+
+.game-button {
+    display: block;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.game-button:hover {
+    border: 1px solid #00ffcc;
+    box-shadow: 0 0 10px #00ffcc33;
+    transform: translateY(-3px);
+}
+
+.game-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* ===== SYSTEM SECTION ===== */
+.system-section {
+    margin-bottom: 30px;
+}
+
+.system-button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.system-button:hover {
+    border: 1px solid #ff4444;
+    box-shadow: 0 0 10px #ff444433;
+}
+
+.back-button {
+    border: 1px solid #00ffcc;
+}
