@@ -174,6 +174,13 @@ window.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", function () {
 
     const startBtn = document.getElementById("startGame");
+function startGame() {
 
+    const status = document.getElementById("gameStatus");
+
+    status.textContent = "Status: Select Difficulty";
+
+    showDifficultyMenu();
+}
     if (startBtn) {
         startBtn.addEventListener("click", startGame);
