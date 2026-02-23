@@ -184,3 +184,11 @@ function startGame() {
 }
     if (startBtn) {
         startBtn.addEventListener("click", startGame);
+function showFloatingCode(code) {
+
+    const floating = document.createElement("div");
+    floating.className = "floating-code";
+    floating.textContent = code;
+
+    document.body.appendChild(floating);
+}
