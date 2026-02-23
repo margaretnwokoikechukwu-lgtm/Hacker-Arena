@@ -176,9 +176,4 @@ document.addEventListener("DOMContentLoaded", function () {
     const startBtn = document.getElementById("startGame");
 
     if (startBtn) {
-        startBtn.addEventListener("click", function () {
-            alert("Start button clicked");
-        });
-    }
-
-});
+        startBtn.addEventListener("click", startGame);
