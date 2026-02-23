@@ -156,3 +156,17 @@ button.danger:hover{
 .hidden{
     display:none;
 }
+.floating-code {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 26px;
+    color: #00ffcc;
+    animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
